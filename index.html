@@ -49,11 +49,13 @@
 </head>
 <body>
     <div class="container">
-
-<form method="POST" action="http://localhost:3200/sarcasm_percentage"> <!-- Підстав ендпойнт, який там має бути -->
-            <input class="input-text" type="text" placeholder="Input text" name="text"> <!-- Підстав параметр -->
-            <button class="submit-button" type="submit">Submit</button>
+        <form>
+            <input class="input-text" type="text" placeholder="Input text" name="text" id="text">
+            <button class="submit-button" id="submit-btn">Submit</button>
         </form>
-        </div>
+        <div id="result-container">
+            </div>
+    </div>
+<script src="main.js"></script>
 </body>
 </html>
