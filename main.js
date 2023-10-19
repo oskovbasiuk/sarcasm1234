@@ -14,7 +14,7 @@ document.querySelector('#submit-btn').addEventListener('click', (event) => {
             text: textForCheck
         })
     }).then((response) => response.json()).then((data) => {
-        resultContainerElement.innerText = data;
+        resultContainerElement.innerText = "Percentage of sarcasm is "+  Math.round(data) + "%";
 
     }).catch((err) => {
         console.error(err);
