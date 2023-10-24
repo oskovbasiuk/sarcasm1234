@@ -74,16 +74,16 @@ ftid_train = vectorizer.transform(datastore['headline']).toarray()
 def preper(txt):
  dat=[]
  dat.append(txt.split())
- print("Splitting text")
- print(dat)
+ #print("Splitting text")
+ #print(dat)
  # tokenization. maximum length of all sequences = 20
  tokenizer = text.Tokenizer(num_words=35000)
  tokenizer.fit_on_texts(dat)
- print("Tokenizer text")
- print(tokenizer)
+ #print("Tokenizer text")
+ #print(tokenizer)
  tokenized_train = tokenizer.texts_to_sequences(dat)
- print("Tokenizer text")
- print(tokenized_train)
+#print("Tokenizer text")
+ #print(tokenized_train)
  x = sequence.pad_sequences(tokenized_train, maxlen=20)
  return x
 

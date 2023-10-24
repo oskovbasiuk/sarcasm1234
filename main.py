@@ -288,6 +288,8 @@ print(df)
 #w1='mother comes pretty close to using word streaming correctly'
 #w1[1]='eat your veggies: 9 deliciously different recipes'
 def calculate(w2):
+    if w2=='':
+        return 'Input ur text'
     if len(w2)<300:
         w1 = denoise(w2)
         w1 = preper(w1)
