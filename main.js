@@ -13,7 +13,7 @@ document.querySelector('#submit-btn').addEventListener('click', (event) => {
         body: JSON.stringify({
             text: textForCheck
         })
-    }).then((response) => response.json()).then((data) => {
+    }).then((response) => response.text()).then((data) => {
         console.log(data);
         resultContainerElement.innerText = data;
 
