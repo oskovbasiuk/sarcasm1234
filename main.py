@@ -295,7 +295,7 @@ def calculate(w2):
         w1 = preper(w1)
             # denoise(w0)
         p1 = modelg.predict(w1)
-        return p1 * 100
+        return "Percentage of sarcasm is ", np.round(p1 * 100) , "%"
 
     return 'text length exceeds 300 symbols'
 
