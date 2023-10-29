@@ -1,8 +1,8 @@
 import pandas as pd
 import stopwords
 import re,string
-from keras.preprocessing import text, sequence
-
+from keras.preprocessing import text
+from keras.utils import pad_sequences
 
 #readind dataset
 datastore = pd.read_json('Sarcasm_Headlines_Dataset.json', lines = True)
@@ -84,6 +84,6 @@ def preper(txt):
  tokenized_train = tokenizer.texts_to_sequences(dat)
 #print("Tokenizer text")
  #print(tokenized_train)
- x = sequence.pad_sequences(tokenized_train, maxlen=20)
+ x = pad_sequences(tokenized_train, maxlen=20)
  return x
 
