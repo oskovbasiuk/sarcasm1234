@@ -1,18 +1,16 @@
 from preprocesing import *
 import pandas as pd
 import tensorflow as tf
-import gensim
+
 import numpy as np
-import keras
+
 from keras.models import Sequential
 from keras.layers import Dense,Embedding,LSTM,Bidirectional,GRU
-import matplotlib.pyplot as plt
+
 from sklearn.metrics import confusion_matrix,accuracy_score
-import seaborn as sns
+
 from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression
-from sklearn.naive_bayes import MultinomialNB
-import chardet
+
 #separating the data on the training and testing set using simple tokeniser
 x_train, x_test, y_train, y_test = train_test_split(x, datastore.is_sarcastic , test_size = 0.3 , random_state = 0)
 #separating the data on the training and testing set using Tfid features

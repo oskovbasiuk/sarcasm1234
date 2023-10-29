@@ -2,7 +2,7 @@ import pandas as pd
 import stopwords
 import re,string
 from keras.preprocessing import text, sequence
-from sklearn.feature_extraction.text import TfidfVectorizer
+
 
 #readind dataset
 datastore = pd.read_json('D:/Sarcasm_Headlines_Dataset.json', lines = True)
