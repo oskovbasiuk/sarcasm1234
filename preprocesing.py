@@ -60,7 +60,7 @@ for i in datastore.headline.values:
 tokenizer = text.Tokenizer(num_words=35000)
 tokenizer.fit_on_texts(datafv)
 tokenized_train = tokenizer.texts_to_sequences(datafv)
-x = sequence.pad_sequences(tokenized_train, maxlen = 20)
+x = pad_sequences(tokenized_train, maxlen = 20)
 """
 #create ft-idf vectorizer
 vectorizer = TfidfVectorizer("english")
