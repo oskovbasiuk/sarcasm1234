@@ -5,7 +5,7 @@ from keras.preprocessing import text, sequence
 
 
 #readind dataset
-datastore = pd.read_json('D:/Sarcasm_Headlines_Dataset.json', lines = True,orient='records')
+datastore = pd.read_json('Sarcasm_Headlines_Dataset.json', lines = True)
 
 #preparing a variable with stop words and punctuation
 stop = set(stopwords.get_stopwords("en"))
